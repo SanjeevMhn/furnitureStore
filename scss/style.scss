@@ -1,0 +1,27 @@
+@import "./_variables.scss";
+@import "./header.scss";
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --main-font: 'Poppins', sans-serif;
+  --text-color: #fff;
+  --primary-color: #F37970;
+  --secondary-color: #FABEC0;
+  --button-color: #E43D40;
+  --alert: #F85C70;
+}
+
+.flex{
+  display: flex;
+}
+.column-align{
+  flex-direction: column;
+}
+
