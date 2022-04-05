@@ -93,7 +93,7 @@
 .primary-nav .nav-list__item:hover::after {
   width: 100%;
 }
-.primary-nav .nav-list__item::after, .primary-nav .nav-list__item--active {
+.primary-nav .nav-list__item::after, .primary-nav .nav-list__item--active::after {
   content: "";
   position: absolute;
   min-height: 2px;
@@ -106,9 +106,6 @@
   transition: all 500ms ease-in-out;
 }
 .primary-nav .nav-list__item--active::after {
-  width: 100%;
-}
-.primary-nav .nav-list__item--active__item::after {
   width: 100%;
 }
 
