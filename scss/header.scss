@@ -1,3 +1,27 @@
+.secondary-nav{
+	background-color: var(--alert);
+	color: #fff;
+	padding: 0 2rem;
+	border-bottom: 1px solid #fff;
+	display: none;
+	.nav-list{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		font-size: 1.15rem;
+		font-family: var(--main-font);
+		&__item{
+			padding: 0.45rem 1rem;
+			cursor: pointer;
+			&:hover{
+				background-color: var(--button-color);
+			}
+		}
+	}
+}
 .primary-nav{
   background-color: var(--primary-color);
   padding: 0 2rem;
@@ -5,7 +29,7 @@
   font-family: var(--main-font);
   color: var(--text-color);
   min-width: 100%;
-  min-height: 85px;
+  min-height: 75px;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
@@ -21,7 +45,7 @@
 			margin: 0;
 			align-items: center;
 			justify-content: center;
-			background-color: var(--button-color);
+			background-color: var(--primary-color);
 			border-radius: 5px;
 			display: flex;
 			transition: all 300ms ease-in;
@@ -69,12 +93,12 @@
 		margin: 0;
 		align-items: center;
 		justify-content: center;
-		background-color: var(--button-color);
+		background-color: var(--primary-color);
 		border-radius: 5px;
 		display: flex;
 		transition: all 300ms ease-in;
 		i{
-			font-size: 1.35rem;
+			font-size: 1.75rem;
 			padding: 0;
 			margin: 0;
 		}
@@ -86,11 +110,35 @@
 		gap: 1rem;
 		display: none;
 		&__item{
-			padding: 0.75rem 1rem;
+			padding: 0.5rem 1rem;
 			position: relative;
 			display: flex;
-			justify-content: center;
 			cursor: pointer;
+			justify-content: center;
+			align-items: center;
+			.icon-container{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				i{
+					padding: 0;
+					margin: 0;
+					font-size: 1.5rem;
+				}
+				&::after{
+					content: '0';
+					position: absolute;
+					background-color: var(--button-color);
+					color: #fff;
+					padding: 0.25rem;
+					font-family: sans-serif;
+					font-size: 0.85rem;
+					top: -10px;
+					right: -10px;
+					border-radius: 20px;
+				}
+			}
 			&:hover{
 				&::after{
 					width: 100%;
@@ -122,7 +170,10 @@
 
 
 @media screen and (min-width: 768px){
-  .primary-nav{
+	.secondary-nav{
+		display: block;
+	}
+	.primary-nav{
 		.nav-list{
 			display: flex;
 		}
@@ -134,19 +185,19 @@
 				display: flex;
 			}
 		}
-  }
+	}
 }
 
 @media screen and (min-width: 992px){
-
-  .primary-nav{
-		.brand{ 
-			.search-data{
-				display: flex;
+	
+	.primary-nav{
+			.brand{ 
+				.search-data{
+					display: flex;
+				}
+				.search-btn,.sidebar-toggle{
+					display: none;
+				}
 			}
-			.search-btn,.sidebar-toggle{
-				display: none;
-			}
-		}
-  }
+	}
 }

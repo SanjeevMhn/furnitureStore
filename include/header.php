@@ -11,6 +11,16 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
+  <nav class="secondary-nav">
+    <ul class="nav-list">
+      <li class="nav-list__item">
+        Log in
+      </li>
+      <li class="nav-list__item">
+        Sign Up
+      </li>
+    </ul>
+  </nav>
   <nav class="primary-nav flex">
     <div class="brand flex">
       <div class="logo-container">
@@ -40,7 +50,9 @@
         About
       </li>
       <li class="nav-list__item">
-        Contact
+        <div class="icon-container">
+          <i class="bi bi-cart3"></i>
+        </div>
       </li>
     </ul>
   </nav>

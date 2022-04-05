@@ -31,9 +31,11 @@ let paths = {
 function styles(){
     
     gulp.src(paths.styles.src)
+    .pipe(sourcemaps.init({loadMaps:true}))
     .pipe(sass())
     .on('error',sass.logError)
     .pipe(gulp.dest(paths.styles.dest))
+    .pipe(sourcemaps.write())
     .pipe(postcss([autoprefixer('last 2 versions'), css()]))
     .pipe(rename({
         suffix: '.min'
@@ -44,9 +46,11 @@ function styles(){
 
 function scripts(){
     gulp.src(paths.script.src)
-    .pipe(uglify())
+    .pipe(sourcemaps.init({loadMaps:true}))
     .pipe(gulp.dest(paths.script.dest))
+    .pipe(uglify())
     .pipe(concat('app.min.js'))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.script.dest))
     .pipe(browserSync.stream())
 }
