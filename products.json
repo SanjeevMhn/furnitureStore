@@ -1,0 +1,40 @@
+
+{
+    "furniture":{
+        "bed":{
+            "product_1":{
+                "id": 1,
+                "name": "Bendre Glitz",
+                "desc": "King Size Bed",
+                "price": 2000,
+                "img": "./images/beds/bed_1.png",
+                "quantity": 10
+            },
+            "product_2":{
+                "id": 2,
+                "name": "George Button",
+                "desc": "Queen Size Bed",
+                "price": 1500,
+                "img": "./images/beds/bed_2.png",
+                "quantity": 20
+            },
+            "product_3":{
+                "id": 3,
+                "name": "Lois Vutton",
+                "desc": "Single Size Bed",
+                "price": 850,
+                "img": "./images/beds/bed_3.png",
+                "quantity": 10
+            },
+            "product_4":{
+                "id": 4,
+                "name": "Malcom",
+                "desc": "King Size Bed",
+                "price": 1800,
+                "img": "./images/beds/bed_4.png",
+                "quantity": 30
+            }
+        }
+    }
+    
+}
